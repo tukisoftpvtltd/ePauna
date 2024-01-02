@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Map Iframe</title>
+</head>
+<body>
+    <div id="map">
+        <iframe src="https://maps.google.com/maps?q=Pokhara&hl=fa;z=14&ie=UTF8&output=embed&hl=e" height="500px" width="100%" title="Iframe Example"></iframe>
+    </div>
+
+
+<script>
+   function updateLocation(mapLocation){
+    document.getElementById('map').innerHTML="<iframe src='https://maps.google.com/maps?q="+mapLocation+"&hl=fa;z=14&ie=UTF8&output=embed&hl=e' height='500px' width='100%' title='Iframe Example'></iframe>";
+   } 
+</script>
+</body>
+</html>

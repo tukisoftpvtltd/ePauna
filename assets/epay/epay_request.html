@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    function requestPayment(tAmt, amt, txAmt, psc, pdc, scd, pid, su, fu) {
+        oForm = document.forms['form'];
+        oForm.elements['tAmt'].value = tAmt;
+        oForm.elements['amt'].value = amt;
+        oForm.elements['txAmt'].value = txAmt;
+        oForm.elements['psc'].value = psc;
+        oForm.elements['pdc'].value = pdc;
+        oForm.elements['scd'].value = scd;
+        oForm.elements['pid'].value = pid;
+        oForm.elements['su'].value = su;
+        oForm.elements['fu'].value = fu;
+    }
+    var wait=setTimeout("document.payment.submit();",1000);
+
+   
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esewa Fill Up Form</title>
+  
+   <style>
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    overflow-x: hidden;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    background-color: #1c252e;
+    /* opacity: 1; */
+    
+}
+
+.display-inline{
+    width: 1365px;
+    margin: auto;
+   
+}
+
+.pay-with-esewa{
+    width: 100%;
+    
+}
+
+.img-esewa {
+    width: 200px;
+    height: 45px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.esewa-heading{
+   text-align: center;
+   margin-top: 15px;
+}
+
+.esewa-heading h1{
+    letter-spacing: 2px;
+    color: #60bb46;
+    font-size: 38px;
+    opacity: 0;
+}
+
+.img-esewa img{
+    width: 100%;
+    height: 100%;
+   opacity: 0;
+}
+
+.form{
+    width: 550px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid #60bb46;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+   
+}
+
+form input{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 95%;
+    height: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #a8aca7;
+}
+
+form input[type="submit"]{
+    padding: 12px!important;
+    width: 120px!important;
+    border: none!important;
+    border-radius: 5px!important;
+    background-color: #60bb46!important;
+    color: white;
+    height: 45px!important;
+}
+
+.loader {
+  border: 16px solid #ffff; /* Light grey */
+  border-top: 16px solid #15cb21; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+ position: fixed;
+  top: 50%;
+  left: 45%; 
+  transform: translate(-50%, -50%); 
+}
+
+.loader-background{
+    background-color: #1c252e;
+    /* opacity: 0.5; */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width:1365px){
+    .display-inline{
+        width: 100%;
+    }
+}
+
+@media(max-width:880px){
+    .loader{
+    left:40%;
+    top: 45%;
+}
+}
+
+@media (max-width:650px){
+.form{
+    width: 86%;
+    margin-left: 10px;
+}
+.loader{
+    left:38%;
+    top: 40%;
+}
+}
+
+@media (max-width:500px){
+    .form{
+        width: 84%;
+    }
+}
+@media (max-width:450px){
+    .loader{
+    left:33%;
+    top: 35%;
+    width: 100px;
+    height: 100px;
+}
+}
+
+@media (max-width:385px){
+    .form{
+        width: 82%;
+    }
+}
+   </style>
+</head>
+<body>
+    <div class="loader-background">
+    <div class="loader"></div> 
+</div>
+    <div class="display-inline">
+<div class="pay-with-esewa">
+<div class="img-esewa">
+    <img src="esewa-paywith.png" alt="">
+</div>
+<div class="esewa-heading">
+    <h1>Pay With eSewa</h1>
+</div>
+
+</div>
+<div class="form">
+<form action="https://uat.esewa.com.np/epay/main" method="post" id="form" name="payment">
+    <label for="">Total Amount</label><br>
+        <input value="0" name="tAmt" type=""><br>
+        <label for="">Amount</label><br>
+        <input value="0" name="amt" type=""><br>
+        <label for="">Tax Amount</label><br>
+        <input value="0" name="txAmt" type=""><br>
+        <label for="">Service Charge</label><br>
+        <input value="0" name="psc" type=""><br>
+        <label for="">Delivery Charge</label><br>
+        <input value="0" name="pdc" type=""><br>
+        <label for="">SCD</label><br>
+        <input value="EPAYTEST" name="scd" type=""><br>
+        <label for="">Product ID</label><br>
+        <input value="ee2c3ca1-696b-4cc5-a6be-2c40d929d453" name="pid" type=""><br>
+        <label for="">Success Url</label><br>
+        <input value="https://developer.esewa.com.np/#/" type="" name="su"><br>
+        <label for="">Failure Url</label><br>
+        <input value="https://developer.esewa.com.np/#/" type="" name="fu"><br>
+        <br>
+
+    <input type="submit" value="Pay Now">
+    
+  </form>   
+</div> 
+</div>
+
+</body>
+</html>

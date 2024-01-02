@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "390795326739",
+    "project_id": "epauna-cbe15",
+    "storage_bucket": "epauna-cbe15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390795326739:android:1b2871a62e78ff50b016e6",
+        "android_client_info": {
+          "package_name": "com.example.pauna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF4D4NTKLLwXngzGYxF-44AfzUpEcIhIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390795326739:android:907fb721148acb42b016e6",
+        "android_client_info": {
+          "package_name": "com.tukisoft.ePauna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF4D4NTKLLwXngzGYxF-44AfzUpEcIhIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390795326739:android:9eb80f2b67abae52b016e6",
+        "android_client_info": {
+          "package_name": "com.tukisoft.ePaunaLite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF4D4NTKLLwXngzGYxF-44AfzUpEcIhIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
